@@ -1,6 +1,6 @@
 $(document).ready(function () {
     //variables to display current day
-    var currentDay = moment().format('MMMM Do YYYY');
+    var currentDay = moment().format('MMMM Do, YYYY');
 
     //variables to write the time blocks 9-5
     var businessHours = [9, 10, 11, 12, 13, 14, 15, 16, 17];
