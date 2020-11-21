@@ -13,31 +13,26 @@ $(document).ready(function () {
         //logs current hour in military as a constant to use as reference
         const currentHour = moment().format('H');
 
-        //variables for the rows, forms and columns
         let row = $("<div class='row'>");
         let form = $("<form autocomplete='off'>")
         let column1 = $("<div class='input-group-prepend hour'>");
         let column2 = $("<input class='form-control input'>");
         let column3 = $("<button class='input-group-append saveBtn' type='submit'>");
 
-        //pulling local storage back to value of input
         let valueFromLocal = localStorage.getItem(businessHours[i]);
         column2.attr("value", valueFromLocal);
 
-        //adding time number to id of all columns
         column1.attr("id", "time" + businessHours[i]);
         column2.attr("id", businessHours[i]);
         column3.attr("id", "button" + businessHours[i]);
 
-        //variable for hours as text
         const hours = $("<h3>");
         hours.text(businessHours[i] + "am");
 
-        //variable for hours for save button
         const saveHour = $("<h6>");
         saveHour.text("Save event");
 
-        //if statement to have am set for all am hours and pm for all pm hours
+        //setting all the time slots 
         if (businessHours[i] >= 12) {
             hours.text(businessHours[i] + "pm");
             if (businessHours[i] >= 13) {
@@ -45,17 +40,10 @@ $(document).ready(function () {
             };
         };
         
-        //pushing hours variable into columns
         column1.append(hours);
-
-        // column2.append(inputEl);
         column3.append(saveHour);
-
-        //columns into forms then into row
         form.append(column1, column2, column3);
         row.append(form);
-
-        //pushing rows to calender div
         $("#calender").append(row);
 
         //color coding time frames
