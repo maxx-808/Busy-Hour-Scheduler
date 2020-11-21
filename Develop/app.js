@@ -1,9 +1,9 @@
 $(document).ready(function () {
     //variables to display current day
-    var currentDay = moment().format('MMMM Do, YYYY');
+    const currentDay = moment().format('MMMM Do, YYYY');
 
     //variables to write the time blocks 9-5
-    var businessHours = [9, 10, 11, 12, 13, 14, 15, 16, 17];
+    const businessHours = [9, 10, 11, 12, 13, 14, 15, 16, 17];
 
     //setting the current time to the header
     $("#currentDay").append(currentDay);
@@ -14,14 +14,14 @@ $(document).ready(function () {
         const currentHour = moment().format('H');
 
         //variables for the rows, forms and columns
-        var row = $("<div class='row'>");
-        var form = $("<form autocomplete='off'>")
-        var column1 = $("<div class='input-group-prepend hour'>");
-        var column2 = $("<input class='form-control input'>");
-        var column3 = $("<button class='input-group-append saveBtn' type='submit'>");
+        let row = $("<div class='row'>");
+        let form = $("<form autocomplete='off'>")
+        let column1 = $("<div class='input-group-prepend hour'>");
+        let column2 = $("<input class='form-control input'>");
+        let column3 = $("<button class='input-group-append saveBtn' type='submit'>");
 
         //pulling local storage back to value of input
-        var valueFromLocal = localStorage.getItem(businessHours[i]);
+        let valueFromLocal = localStorage.getItem(businessHours[i]);
         column2.attr("value", valueFromLocal);
 
         //adding time number to id of all columns
@@ -30,11 +30,11 @@ $(document).ready(function () {
         column3.attr("id", "button" + businessHours[i]);
 
         //variable for hours as text
-        var hours = $("<h3>");
+        const hours = $("<h3>");
         hours.text(businessHours[i] + "am");
 
         //variable for hours for save button
-        var saveHour = $("<h6>");
+        const saveHour = $("<h6>");
         saveHour.text("Save event");
 
         //if statement to have am set for all am hours and pm for all pm hours
@@ -74,7 +74,7 @@ $(document).ready(function () {
     //sending info to local storage on submit from each form
     $("form").on("submit", function(e) {
         e.preventDefault();
-        
+
         const time = e.target.querySelector("input").getAttribute("id");
         const text = e.target.querySelector("input").value;
         window.localStorage.setItem(time, text);
