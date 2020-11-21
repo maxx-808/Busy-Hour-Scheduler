@@ -74,10 +74,9 @@ $(document).ready(function () {
     //sending info to local storage on submit from each form
     $("form").on("submit", function(e) {
         e.preventDefault();
-
+        
         const time = e.target.querySelector("input").getAttribute("id");
         const text = e.target.querySelector("input").value;
-
         window.localStorage.setItem(time, text);
         
     });

@@ -1,11 +1,10 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1;
 }
 
-
-textarea{
+textarea {
   background: transparent;
   border: none;
   resize: none;
@@ -21,6 +20,11 @@ h3 {
 h6 {
   padding-top: 7px;
   padding-left: 8px;
+}
+
+form {
+  width: 100%;
+  height: 50px;
 }
 
 .input {
@@ -48,11 +52,11 @@ h6 {
   border-bottom: 10px solid black;
 }
 
-.description{
+.description {
   white-space: pre-wrap;
 }
 
-.time-block{
+.time-block {
   text-align: center;
   border-radius: 15px;
 }
@@ -64,7 +68,6 @@ h6 {
 }
 
 .hour {
-
   border-top: 1px dashed #000000;
   height: 45px;
   vertical-align: middle;
@@ -74,17 +77,14 @@ h6 {
 
 .past {
   background-color: red;
-
 }
 
 .present {
   background-color: green;
-
 }
 
 .future {
   background-color: yellow;
-
 }
 
 .saveBtn {
@@ -94,10 +94,5 @@ h6 {
   width: 10%;
   height: 45px;
   font-size: 20px;
-  transition: all .3s ease-in-out;
-}
-
-form {
-  width: 100%;
-  height: 50px;
+  transition: all 0.3s ease-in-out;
 }
