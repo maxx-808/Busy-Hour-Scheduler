@@ -1,11 +1,11 @@
-Work Day Scheduler
+ # Work Day Scheduler
 
 Third Party APIs
 Homework week 5
 
-Deployed app: https://maxx-808.github.io/Busy-Hour-Scheduler/
+## Deployed app: https://maxx-808.github.io/Busy-Hour-Scheduler/
 
-Used in this app:
+## Used in this app:
 HTML
 CSS
 Bootstrap
